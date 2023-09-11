@@ -5,6 +5,135 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <title>Archero-remake</title>
+  <style type="text/css">
+    html {
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      font-family: mariupol,sans-serif;
+    }
+   .jss1 {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      position: absolute;
+      overflow: hidden;
+      background-size: cover;
+      background-color: #002b50;
+      background-position: center;
+    }
+    .jss1:before {
+      top: 0;
+      width: 100%;
+      filter: blur(16px);
+      height: 100%;
+      content: "";
+      display: block;
+      opacity: .5;
+      z-index: 0;
+      position: absolute;
+      background-size: cover;
+      background-image: url(logo.gif);
+    }
+    .jss34 {
+      flex-direction: column;
+    }
+    .jss31 {
+      width: 100%;
+      display: flex;
+      z-index: 1;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+    }
+    .jss32 {
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .jss50 {
+      justify-content: space-between;
+    }
+    .jss39 {
+      align-items: center;
+    }
+    .gameloader {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      overflow: hidden;
+    }
+    .gameloader .gameloader-logo img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+    }
+    .gameloader .gameloader-logo {
+      margin: 8px 0 15px;
+      width: 300px;
+    }
+    .gameloader .gameloader-game-name {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      text-shadow: 1px 1px 1px #00476c;
+      min-height: 23px;
+    }
+    .gameloader .gameloader-progressbar {
+      width: 300px;
+      height: 8px;
+      border-radius: 0.6vh;
+      background-color: #fff;
+      flex-grow: 1;
+      transition: .2s ease-out all;
+    }
+    .gameloader .gameloader-progress-info {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+      text-shadow: 1px 1px 1px #00476c;
+      min-height: 16px;
+    }
+    .gameloader .gameloader-progressbar .gameloader-progressbar-progress {
+      width: 0;
+      height: 100%;
+      border-radius: 0.6vh;
+      background-color: #3cf7dc;
+      transition: .2s ease-out all;
+      animation-name: fillColor;
+      animation-duration: 3.5s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+    }
+    @keyframes fillColor {
+      0% {
+          background-color: #3cf7dc
+      }
+
+      25% {
+          background-color: #ffa9be
+      }
+
+      50% {
+          background-color: #ffdc00
+      }
+
+      75% {
+          background-color: #e0aef5
+      }
+
+      100% {
+          background-color: #3cf7dc
+      }
+    }
+  </style>
 </head>
 
 <body style="margin: 0px; overflow: hidden;" oncontextmenu="return false;">
@@ -12,14 +141,40 @@
     style="position: fixed; width: 100%; height: 100%; background: #231F20">
   </canvas>
 
-  <div id="progress-bar" style="position: absolute; left: 0%; right: 100%; top: 49%; bottom: 49%; background-color: white;"></div>
+  <div id="info-container" style="position: absolute; left: 6%; right: 6%; top: 0%; bottom: 0%; display:flex;align-content: center;flex-direction: column;justify-content: center;">
+    
+    <div class="jss31 jss34 jss1">
+      <div class="jss31 jss34" style="flex: 3 1 0%;">
+        <div class="jss32" style="height: 100%;display: flex; align-items: center;">
+          <div class="jss31 jss34 jss39 jss50 gameloader">
+            <div class="jss32">
+              <div id="game-title" class="gameloader-game-name"></div>
+            </div>
+            <div class="jss32">
+              <div class="jss32 gameloader-logo"><img id="game-logo" src="logo.gif"></div>
+            </div>
+            <div class="jss32">
+              <div>
+                <div class="gameloader-progressbar">
+                  <div id="progress-bar" class="gameloader-progressbar-progress"></div>
+                </div>
+                <div id="loading-title" class="gameloader-progress-info"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <script src="Build/builds.loader.js"></script>
+  <script id="yandex-sdk" src="https://yandex.ru/games/sdk/v2"></script>
   <script>
     const settings = {
-      dataUrl: "Build/fc33fa1f48ecee9e1ae3c67ea75759f6.data.unityweb",
-      frameworkUrl: "Build/d8e7443f3a96a2b603b040d2397d8c6d.js.unityweb",
-      codeUrl: "Build/1f7730b7f11b937c48eb08b9057379ca.wasm.unityweb",
+      dataUrl: "Build/f419359706f32c4069e87b7e1b2048c8.data.unityweb",
+      frameworkUrl: "Build/ec07151819fca7dea879acf5279b7bb5.js.unityweb",
+      codeUrl: "Build/b2ae421b5a966519e7d06968c7dc2751.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Archero-remake",
@@ -27,17 +182,27 @@
       matchWebGLToCanvasSize: true,
     };
 
-    const progressBar = document.querySelector("#progress-bar");
+    const progressBar = document.querySelector('#progress-bar');
+    const infoContainer = document.querySelector('#info-container');
 
+    YaGames?.init().then(ysdk => {
+      const isRu = ysdk.environment.i18n.lang == "ru";
+      gameTitle.textContent = isRu ? 'Fey Archer' : 'Fey Archer';
+      loadingTitle.textContent = isRu ? 'Загрузка игры... (занимает до 15 секунд)' : 'Loading... (takes up to 15 seconds)';
+    })
+        
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
-        progressBar.style.right = 100 * (1 - progress) + "%";
+        progressBar.style.width = 100 - 100 * (1 - progress) + "%";        
       }).then(() => {
-        progressBar.style.display = "none";
+        infoContainer.style.display = "none";
       }).catch((message) => {
         alert(message);
       });
-    }, 500); // Wait half a second before loading. Makes page more responsive on reload.
+    }, 200); // Wait half a second before loading. Makes page more responsive on reload.
+
+    const gameTitle = document.querySelector('#game-title');
+    const loadingTitle = document.querySelector('#loading-title');
   </script>
 </body>
 
