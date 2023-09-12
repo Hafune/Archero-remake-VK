@@ -169,12 +169,12 @@
   </div>
 
   <script src="Build/builds.loader.js"></script>
-  <script id="yandex-sdk" src="https://yandex.ru/games/sdk/v2"></script>
+  <!-- <script id="yandex-sdk" src="https://yandex.ru/games/sdk/v2"></script> -->
   <script>
     const settings = {
-      dataUrl: "Build/f419359706f32c4069e87b7e1b2048c8.data.unityweb",
-      frameworkUrl: "Build/ec07151819fca7dea879acf5279b7bb5.js.unityweb",
-      codeUrl: "Build/b2ae421b5a966519e7d06968c7dc2751.wasm.unityweb",
+      dataUrl: "Build/7e2c52a4882d8a2ebefed26c08850884.data.unityweb",
+      frameworkUrl: "Build/8e27f2c8bfbfaba2febdf31d6265d6b4.js.unityweb",
+      codeUrl: "Build/83ba8d202e8919f944aeda16a9003f05.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Archero-remake",
@@ -184,13 +184,13 @@
 
     const progressBar = document.querySelector('#progress-bar');
     const infoContainer = document.querySelector('#info-container');
-
+/*
     YaGames?.init().then(ysdk => {
       const isRu = ysdk.environment.i18n.lang == "ru";
       gameTitle.textContent = isRu ? 'Fey Archer' : 'Fey Archer';
       loadingTitle.textContent = isRu ? 'Загрузка игры... (занимает до 15 секунд)' : 'Loading... (takes up to 15 seconds)';
     })
-        
+*/  
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
         progressBar.style.width = 100 - 100 * (1 - progress) + "%";        
