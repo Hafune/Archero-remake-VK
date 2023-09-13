@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af7f4dcf-feec-484d-aa26-8e9ba6fe1dd4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Archero-remake-VK.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Archero-remake-VK.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/b2ae421b5a966519e7d06968c7dc2751.wasm.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/ec07151819fca7dea879acf5279b7bb5.js.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Build/f419359706f32c4069e87b7e1b2048c8.data.unityweb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="af7f4dcf-feec-484d-aa26-8e9ba6fe1dd4" name="Changes" comment="upd" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +9,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2VJ6C1JjRto6UqOdO2vaVuqCb3Y" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -40,8 +37,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694541704815</updated>
-      <workItem from="1694541713013" duration="319000" />
+      <workItem from="1694541713013" duration="452000" />
     </task>
+    <task id="LOCAL-00001" summary="upd">
+      <created>1694542069506</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694542069506</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -59,5 +64,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
 </project>
