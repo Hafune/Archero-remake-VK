@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af7f4dcf-feec-484d-aa26-8e9ba6fe1dd4" name="Changes" comment="upd">
-      <change afterPath="$PROJECT_DIR$/Build/a5265284c0eadf2e21784e2a7245fb2b.data.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Archero-remake-VK.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Archero-remake-VK.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/8307d75b612576db8646fb25ac029d60.wasm.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/a5265284c0eadf2e21784e2a7245fb2b.data.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +48,7 @@
       <workItem from="1694594442050" duration="593000" />
       <workItem from="1694599170108" duration="534000" />
       <workItem from="1694600065999" duration="42000" />
-      <workItem from="1694600893156" duration="400000" />
+      <workItem from="1694600893156" duration="1865000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1694542069506</created>
@@ -103,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694601290609</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="upd">
+      <created>1694601327672</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1694601327672</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
