@@ -193,11 +193,12 @@
   </div>
 
   <script src="Build/builds.loader.js"></script>
+  <script id="yandex-sdk" src="https://yandex.ru/games/sdk/v2"></script>
   <script>
     const settings = {
-      dataUrl: "Build/ffd0a0a82f6beb722c6c406aeef0a759.data.unityweb",
-      frameworkUrl: "Build/0ab8f2791f76a5db663a2a0449288920.js.unityweb",
-      codeUrl: "Build/63086cb08ae15cc0ce232bd011b2fbc4.wasm.unityweb",
+      dataUrl: "Build/9793a12ec40a9451d3607083274ca979.data.unityweb",
+      frameworkUrl: "Build/fe0280ce0ce03da5fc3c626d6f73b463.js.unityweb",
+      codeUrl: "Build/8c165afd08c2069cf3b080ec20371f9b.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Archero-remake",
@@ -208,13 +209,17 @@
     const progressBar = document.querySelector('#progress-bar');
     const infoContainer = document.querySelector('#info-container');
 
-    const loadingTitleString = 'Загрузка игры...';
+    let loadingTitleString = "";
     const gameTitle = document.querySelector('#game-title');
     const loadingTitle = document.querySelector('#loading-title');
 
-    gameTitle.textContent = 'Fey Archer';
-    loadingTitle.textContent = loadingTitleString;
-
+    YaGames?.init().then(ysdk => {
+      const isRu = ysdk.environment.i18n.lang == "ru";
+      gameTitle.textContent = isRu ? 'Fey Archer' : 'Fey Archer';
+      loadingTitleString = isRu ? 'Загрузка игры...' : 'Loading...';
+      loadingTitle.textContent = loadingTitleString;
+    });
+        
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
         progressBar.style.width = 100 - 100 * (1 - progress) + "%";
