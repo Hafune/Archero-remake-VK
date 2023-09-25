@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>Archero-remake</title>
+  <title>{{{ PRODUCT_NAME }}}</title>
   <style type="text/css">
     html {
       -webkit-font-smoothing: antialiased;
@@ -80,6 +80,12 @@
     .gameloader .gameloader-logo {
       margin: 8px 0 15px;
       width: 300px;
+      height: 170px;
+      position: relative;
+    }
+    .logo-img{
+      visibility:hidden;
+      position: absolute;
     }
     .gameloader .gameloader-game-name {
       font-size: 20px;
@@ -166,7 +172,10 @@
               <div id="game-title" class="gameloader-game-name"></div>
             </div>
             <div class="jss32">
-              <div class="jss32 gameloader-logo"><img id="game-logo" src="logo.gif"></div>
+              <div class="jss32 gameloader-logo">
+                <img class="logo-img" src="logo-0.png">
+                <img class="logo-img" src="logo-1.png">
+              </div>
             </div>
             <div class="jss32">
               <div>
@@ -199,13 +208,13 @@
     const progressBar = document.querySelector('#progress-bar');
     const infoContainer = document.querySelector('#info-container');
 
-    const loadingTitleString = 'Загрузка игры...';
+    let loadingTitleString = 'Загрузка игры...';
     const gameTitle = document.querySelector('#game-title');
     const loadingTitle = document.querySelector('#loading-title');
 
-    gameTitle.textContent = 'Fey Archer';
-    loadingTitle.textContent = loadingTitleString;
-
+    gameTitle.textContent = isRu ? 'Fey Archer' : 'Fey Archer';
+    loadingTitleString = isRu ? 'Загрузка игры...' : 'Loading...';
+    
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
         progressBar.style.width = 100 - 100 * (1 - progress) + "%";
