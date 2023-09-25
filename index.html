@@ -195,9 +195,9 @@
   <script src="Build/builds.loader.js"></script>
   <script>
     const settings = {
-      dataUrl: "Build/9793a12ec40a9451d3607083274ca979.data.unityweb",
+      dataUrl: "Build/576530e6b4316897d8023f133c0ce6a7.data.unityweb",
       frameworkUrl: "Build/fe0280ce0ce03da5fc3c626d6f73b463.js.unityweb",
-      codeUrl: "Build/8c165afd08c2069cf3b080ec20371f9b.wasm.unityweb",
+      codeUrl: "Build/8310baf321b45c308b8304482d86d2d7.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Archero-remake",
@@ -208,10 +208,13 @@
     const progressBar = document.querySelector('#progress-bar');
     const infoContainer = document.querySelector('#info-container');
 
-    let loadingTitleString = "";
+    const loadingTitleString = 'Загрузка игры...';
     const gameTitle = document.querySelector('#game-title');
     const loadingTitle = document.querySelector('#loading-title');
-        
+
+    gameTitle.textContent = 'Fey Archer';
+    loadingTitle.textContent = loadingTitleString;
+
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
         progressBar.style.width = 100 - 100 * (1 - progress) + "%";
