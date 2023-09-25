@@ -21,21 +21,31 @@
       position: absolute;
       overflow: hidden;
       background-size: cover;
-      background-color: #002b50;
       background-position: center;
     }
-    .jss1:before {
+    .background-image {
+      visibility:hidden;
       top: 0;
       width: 100%;
       filter: blur(16px);
       height: 100%;
-      content: "";
       display: block;
-      opacity: .5;
       z-index: 0;
       position: absolute;
       background-size: cover;
-      background-image: url(logo.gif);
+    }
+   .background-image-blue {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      position: absolute;
+      overflow: hidden;
+      background-size: cover;
+      background-color: #002b50;
+      background-position: center;
+      opacity: 0.45;
     }
     .jss34 {
       flex-direction: column;
@@ -144,6 +154,11 @@
   <div id="info-container" style="position: absolute; left: 6%; right: 6%; top: 0%; bottom: 0%; display:flex;align-content: center;flex-direction: column;justify-content: center;">
     
     <div class="jss31 jss34 jss1">
+      <div class="jss1">
+        <img class="background-image" src="logo-0.png">
+        <img class="background-image" src="logo-1.png">
+        <div class="background-image-blue"></div> 
+      </div>      
       <div class="jss31 jss34" style="flex: 3 1 0%;">
         <div class="jss32" style="height: 100%;display: flex; align-items: center;">
           <div class="jss31 jss34 jss39 jss50 gameloader">
@@ -171,9 +186,9 @@
   <script src="Build/builds.loader.js"></script>
   <script>
     const settings = {
-      dataUrl: "Build/547cf6de23874178fc8d98e6285ddf4b.data.unityweb",
-      frameworkUrl: "Build/6ca11bd749020fd85808feeba27574cd.js.unityweb",
-      codeUrl: "Build/f66bfcb15c21b04e335c8442096e48cc.wasm.unityweb",
+      dataUrl: "Build/9d1b28f25993cec5f8ada1333a7e921a.data.unityweb",
+      frameworkUrl: "Build/d8595e1d3606d85979e83ecdd1bb223e.js.unityweb",
+      codeUrl: "Build/24145862d26d042fb42ad07a8fe6f6f2.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
       companyName: "DefaultCompany",
       productName: "Archero-remake",
@@ -184,21 +199,57 @@
     const progressBar = document.querySelector('#progress-bar');
     const infoContainer = document.querySelector('#info-container');
 
+    const loadingTitleString = 'Загрузка игры...';
+    const gameTitle = document.querySelector('#game-title');
+    const loadingTitle = document.querySelector('#loading-title');
+
+    gameTitle.textContent = 'Fey Archer';
+    loadingTitle.textContent = loadingTitleString;
+
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
-        progressBar.style.width = 100 - 100 * (1 - progress) + "%";        
+        progressBar.style.width = 100 - 100 * (1 - progress) + "%";
+        loadingTitle.textContent = `${loadingTitleString} ${Math.ceil(progress * 100)}%`;
       }).then(() => {
         infoContainer.style.display = "none";
       }).catch((message) => {
         alert(message);
       });
     }, 200); // Wait half a second before loading. Makes page more responsive on reload.
+  </script>
+  <script src="gsap.min.js"></script>
+  <script>
+    const infoCont = document.querySelector('#info-container');
+    const buildAnimation = ({className}) => {
+      let images = gsap.utils.toArray(className),
+      tl = gsap.timeline({repeat: -1}),
+      fadeDuration = 1.5,
+      stayDuration = 2;
 
-    const gameTitle = document.querySelector('#game-title');
-    const loadingTitle = document.querySelector('#loading-title');
+      const maxOpacity = 1;
+      // show the first one
+      gsap.set(images[0], {autoAlpha: maxOpacity});
 
-    gameTitle.textContent = 'Fey Archer';
-    loadingTitle.textContent = 'Загрузка игры... (занимает до 15 секунд)';
+      // fade each one in successively (in a staggered fashion) EXCEPT the first one (because it's already visible)
+      tl.to(images.slice(1), {delay: stayDuration, autoAlpha: maxOpacity, duration: fadeDuration, stagger: stayDuration + fadeDuration})
+        // hide each one after the next one finishes fading in on top of it. Exclude the final image because we'll handle the crossfade with the first image with a tween at the end.
+        .to(images.slice(0, images.length-1), {autoAlpha: 0, duration:0.01, stagger: stayDuration + fadeDuration}, stayDuration + fadeDuration)
+        // show the first image (but it won't be visible yet because the last image is on top of it)
+        .set(images[0], {autoAlpha: maxOpacity})
+        // now fade out the last image so that the first one is showing again
+        .to(images[images.length-1], {autoAlpha: 0, duration: fadeDuration}, "+=" + stayDuration);
+
+      const interval = setInterval(()=> {
+        if (infoCont.style.display != "none")
+          return;
+          
+          clearInterval(interval);
+          tl.kill();
+      }, 1000);
+    }
+
+    buildAnimation({className : ".logo-img"});    
+    buildAnimation({className : ".background-image"});
   </script>
 </body>
 
