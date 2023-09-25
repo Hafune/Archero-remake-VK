@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>{{{ PRODUCT_NAME }}}</title>
+  <title>Archero-remake</title>
   <style type="text/css">
     html {
       -webkit-font-smoothing: antialiased;
@@ -195,7 +195,7 @@
   <script src="Build/builds.loader.js"></script>
   <script>
     const settings = {
-      dataUrl: "Build/eb91dacd44f6176bde769809b73d7ab5.data.unityweb",
+      dataUrl: "Build/e45253dc06265bf85db175b243af0fc6.data.unityweb",
       frameworkUrl: "Build/ccf0e78fef0a14473d68f73511417ed3.js.unityweb",
       codeUrl: "Build/1527e5b3338a1498848d4bb7396c28c5.wasm.unityweb",
       streamingAssetsUrl: "StreamingAssets",
@@ -208,13 +208,13 @@
     const progressBar = document.querySelector('#progress-bar');
     const infoContainer = document.querySelector('#info-container');
 
-    let loadingTitleString = 'Загрузка игры...';
+    const loadingTitleString = 'Загрузка игры...';
     const gameTitle = document.querySelector('#game-title');
     const loadingTitle = document.querySelector('#loading-title');
 
-    gameTitle.textContent = isRu ? 'Fey Archer' : 'Fey Archer';
-    loadingTitleString = isRu ? 'Загрузка игры...' : 'Loading...';
-    
+    gameTitle.textContent = 'Fey Archer';
+    loadingTitle.textContent = loadingTitleString;
+
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
         progressBar.style.width = 100 - 100 * (1 - progress) + "%";
