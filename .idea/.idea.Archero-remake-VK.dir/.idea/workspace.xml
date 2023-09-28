@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af7f4dcf-feec-484d-aa26-8e9ba6fe1dd4" name="Changes" comment="fixes" />
+    <list default="true" id="af7f4dcf-feec-484d-aa26-8e9ba6fe1dd4" name="Changes" comment="upd">
+      <change afterPath="$PROJECT_DIR$/Build/49642b87e15a6fc85d051066b6d4c0a1.wasm.unityweb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build/5c2c8bfa6968e3f888a81b4bfdead114.data.unityweb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Build/f0dcefa0bd8b82ccc3dcb7240291c371.js.unityweb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/5367cf944e464b485a246cb1106d4496.data.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/5f3719ef05791271b9754db36de9bb1b.js.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Build/f58b1eedfd6c00d9a4e13dac73d22245.wasm.unityweb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamingAssets/aa/catalog.json" beforeDir="false" afterPath="$PROJECT_DIR$/StreamingAssets/aa/catalog.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamingAssets/aa/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/StreamingAssets/aa/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +58,7 @@
       <workItem from="1695642810086" duration="1209000" />
       <workItem from="1695658915457" duration="280000" />
       <workItem from="1695726338367" duration="849000" />
+      <workItem from="1695924984049" duration="609000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1694542069506</created>
@@ -245,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695726351570</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="upd">
+      <created>1695924993478</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1695924993478</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,9 +283,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="upd" />
     <MESSAGE value="try addressable" />
     <MESSAGE value="fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
+    <MESSAGE value="upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
 </project>
