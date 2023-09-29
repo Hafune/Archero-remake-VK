@@ -193,7 +193,6 @@
   </div>
 
   <script src="Build/builds.loader.js"></script>
-  <script id="yandex-sdk" src="https://yandex.ru/games/sdk/v2"></script>
   <script>
     const settings = {
       dataUrl: "Build/afd0113a5c444cbf4e43816c893bb195.data.unityweb",
@@ -209,17 +208,13 @@
     const progressBar = document.querySelector('#progress-bar');
     const infoContainer = document.querySelector('#info-container');
 
-    let loadingTitleString = "";
+    const loadingTitleString = 'Загрузка игры...';
     const gameTitle = document.querySelector('#game-title');
     const loadingTitle = document.querySelector('#loading-title');
 
-    YaGames?.init().then(ysdk => {
-      const isRu = ysdk.environment.i18n.lang == "ru";
-      gameTitle.textContent = isRu ? 'Fey Archer' : 'Fey Archer';
-      loadingTitleString = isRu ? 'Загрузка игры...' : 'Loading...';
-      loadingTitle.textContent = loadingTitleString;
-    });
-        
+    gameTitle.textContent = 'Fey Archer';
+    loadingTitle.textContent = loadingTitleString;
+
     setTimeout(() => {
       createUnityInstance(document.querySelector("#unity-canvas"), settings, (progress) => {
         progressBar.style.width = 100 - 100 * (1 - progress) + "%";
