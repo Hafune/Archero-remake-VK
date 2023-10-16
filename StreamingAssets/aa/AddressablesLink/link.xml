@@ -127,7 +127,6 @@
     <type fullname="WinnerScreenEnableOnStart" preserve="all" />
     <type fullname="Core.Components.AbilityDropMoneyOnDeathValueComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.AbilitySpawnCollectableOnDeathComponent" preserve="nothing" serialized="true" />
-    <type fullname="Core.Components.AbilitySpawnCollectableOnDeathComponent/CollectableData" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.AbilitySpawnExperienceOnDeathComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.AbilitySpawnOnHealthPercentComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.AbilityTripleShotComponent" preserve="nothing" serialized="true" />
@@ -150,7 +149,6 @@
     <type fullname="Core.Components.BodyColliderComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.CollectableAreaComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.CollectableExperienceComponent" preserve="nothing" serialized="true" />
-    <type fullname="Core.Components.CollectableHealingComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.ColliderHandler" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.DamageValueComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.DependsByExternalLevelTag" preserve="nothing" serialized="true" />
@@ -159,7 +157,6 @@
     <type fullname="Core.Components.DirectionComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.EnemyTag" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.EventInitComponents" preserve="nothing" serialized="true" />
-    <type fullname="Core.Components.ExperienceToLevelValueComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.FireAreaComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.FireAreaTargetTag" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.HitBlinkComponent" preserve="nothing" serialized="true" />
@@ -194,6 +191,7 @@
     <type fullname="Core.Components.DontDestroyOnLoadTag" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.EnableTag`1[Core.Components.ActionShootComponent]" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.EvasionValueComponent" preserve="nothing" serialized="true" />
+    <type fullname="Core.Components.ExperienceToLevelValueComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.ExperienceValueComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.ForceRefreshTargetComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.FriendTag" preserve="nothing" serialized="true" />
@@ -205,6 +203,8 @@
     <type fullname="Core.Components.ShootEffectComponent" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.SpeedAreaTargetTag`1[Core.Components.SpeedGroupUp]" preserve="nothing" serialized="true" />
     <type fullname="Core.Components.TargetMarkerComponent" preserve="nothing" serialized="true" />
+    <type fullname="Core.Components.AbilitySpawnCollectableOnDeathComponent/CollectableData" preserve="nothing" serialized="true" />
+    <type fullname="Core.Components.CollectableHealingComponent" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="Lib, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="AnimatorEventBus" preserve="all" />
@@ -320,8 +320,8 @@
     <type fullname="UnityEngine.Texture2D" preserve="all" />
     <type fullname="UnityEngine.TrailRenderer" preserve="all" />
     <type fullname="UnityEngine.Transform" preserve="all" />
-    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
   </assembly>
@@ -349,12 +349,12 @@
     <type fullname="UnityEngine.UI.Mask" preserve="all" />
     <type fullname="UnityEngine.UI.Slider" preserve="all" />
     <type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
     <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
-    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
   </assembly>
   <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
     <type fullname="UnityEngine.Canvas" preserve="all" />
