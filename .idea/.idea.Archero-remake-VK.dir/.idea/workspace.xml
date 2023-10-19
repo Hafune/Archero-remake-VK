@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af7f4dcf-feec-484d-aa26-8e9ba6fe1dd4" name="Changes" comment="upd" />
+    <list default="true" id="af7f4dcf-feec-484d-aa26-8e9ba6fe1dd4" name="Changes" comment="upd">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Archero-remake-VK.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Archero-remake-VK.dir/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +58,7 @@
       <workItem from="1697364570793" duration="632000" />
       <workItem from="1697369860131" duration="693000" />
       <workItem from="1697465432340" duration="636000" />
+      <workItem from="1697700489323" duration="1092000" />
     </task>
     <task id="LOCAL-00001" summary="upd">
       <created>1694542069506</created>
@@ -330,7 +333,21 @@
       <option name="project" value="LOCAL" />
       <updated>1697465470896</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="upd">
+      <created>1697700497294</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1697700497294</updated>
+    </task>
+    <task id="LOCAL-00041" summary="upd">
+      <created>1697706232922</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1697706232922</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
